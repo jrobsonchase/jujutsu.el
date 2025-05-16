@@ -155,7 +155,7 @@ Returns a formatted string with appropriate text properties."
 (defun jujutsu-status-new (args)
   "Run jj new with ARGS."
   (interactive (list (transient-args 'jujutsu-status-new-popup)))
-  (let ((cmd (concat "squash " (s-join " " args))))
+  (let ((cmd (concat "new " (s-join " " args))))
     (jujutsu-core--run-command cmd t)
     (jujutsu-status)))
 
